@@ -10,14 +10,16 @@ export function Footer() {
         <p className={s.text}>
           © {year} {personal.name}. Frontend Developer.
         </p>
-        <a
-          href={personal.projectGithub}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={s.link}
-        >
-          GitHub →
-        </a>
+        <p className={s.text}>Ссылка на проект:&nbsp;
+          <a
+            href={personal.projectGithub}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.link}
+          >
+            GitHub →
+          </a>
+        </p>
       </div>
     </footer>
   );
