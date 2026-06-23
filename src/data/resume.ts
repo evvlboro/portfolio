@@ -2,7 +2,7 @@ export const personal = {
   name: "Евгений Боровиков",
   fullName: "Боровиков Евгений Владимирович",
   role: "Frontend Developer",
-  tagline: "React · Next.js · TypeScript",
+  tagline: "React · Next.js · TypeScript · Cursor",
   summary:
     "Коммерческий опыт в банковской сфере, телекоме, e-commerce и продуктовых командах.",
   email: "aprilryanwork@gmail.com",
