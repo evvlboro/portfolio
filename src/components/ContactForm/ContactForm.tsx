@@ -63,7 +63,7 @@ export function ContactForm() {
     const formData = new FormData(event.currentTarget);
     const payload = {
       name: String(formData.get("name") ?? "").trim(),
-      email: String(formData.get("email") ?? "").trim(),
+      contacts: String(formData.get("contacts") ?? "").trim(),
       message: String(formData.get("message") ?? "").trim(),
       recaptchaToken: recaptchaTokenValue,
     };
@@ -130,16 +130,16 @@ export function ContactForm() {
               </div>
 
               <div className={s.field}>
-                <label htmlFor="contact-email" className={s.label}>
-                  Email
+                <label htmlFor="contact-contacts" className={s.label}>
+                  Ваши контакты
                 </label>
                 <input
-                  id="contact-email"
-                  name="email"
-                  type="email"
+                  id="contact-contacts"
+                  name="contacts"
+                  type="text"
                   required
                   className={s.input}
-                  placeholder="your@email.com"
+                  placeholder="Как с вами связаться?"
                 />
               </div>
 

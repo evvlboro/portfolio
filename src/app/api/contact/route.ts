@@ -3,7 +3,7 @@ import { verifyRecaptcha } from "@/lib/verifyRecaptcha";
 
 type ContactPayload = {
   name: string;
-  email: string;
+  contacts: string;
   message: string;
   recaptchaToken?: string;
 };
@@ -22,16 +22,11 @@ export async function POST(request: Request) {
     const body = (await request.json()) as ContactPayload;
 
     const name = body.name?.trim();
-    const email = body.email?.trim();
+    const contacts = body.contacts?.trim();
     const message = body.message?.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !contacts || !message) {
       return NextResponse.json({ error: "Заполните все поля" }, { status: 400 });
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ error: "Некорректный email" }, { status: 400 });
     }
 
     const recaptchaToken = body.recaptchaToken?.trim();
@@ -65,7 +60,7 @@ export async function POST(request: Request) {
       "📩 Новое сообщение с сайта-визитки",
       "",
       `👤 Имя: ${name}`,
-      `📧 Email: ${email}`,
+      `📞 Контакты: ${contacts}`,
       "",
       `💬 Сообщение:`,
       message,
