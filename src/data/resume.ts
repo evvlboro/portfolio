@@ -9,6 +9,7 @@ export const personal = {
   phone: "+375 (25) 631-53-74",
   telegram: "https://t.me/aprilrynn",
   github: "https://github.com/evvlboro",
+  projectGithub: "https://github.com/evvlboro/portfolio",
   placeholderImage: "/images/placeholder.png",
   avatarImage: "/images/ava.png",
 };

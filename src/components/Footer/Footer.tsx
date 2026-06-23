@@ -11,7 +11,7 @@ export function Footer() {
           © {year} {personal.name}. Frontend Developer.
         </p>
         <a
-          href={personal.github}
+          href={personal.projectGithub}
           target="_blank"
           rel="noopener noreferrer"
           className={s.link}
