@@ -1,0 +1,15 @@
+export { About } from "./About/About";
+export { ContactForm } from "./ContactForm/ContactForm";
+export { ContactModalProvider, useContactModal } from "./ContactModalProvider/ContactModalProvider";
+export { Contacts } from "./Contacts/Contacts";
+export { Education } from "./Education/Education";
+export { Experience } from "./Experience/Experience";
+export { Footer } from "./Footer/Footer";
+export { Header } from "./Header/Header";
+export { Hero } from "./Hero/Hero";
+export { PortfolioCard } from "./PortfolioCard/PortfolioCard";
+export { PortfolioCarousel } from "./PortfolioCarousel/PortfolioCarousel";
+export { Projects } from "./Projects/Projects";
+export { Section } from "./Section/Section";
+export { Skills } from "./Skills/Skills";
+export { SocialLinks } from "./SocialLinks/SocialLinks";
