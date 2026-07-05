@@ -1,14 +1,31 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { portfolioCases } from "@/data/resume";
 import { cn } from "@/lib/cn";
 import { PortfolioCard } from "@/components/PortfolioCard/PortfolioCard";
 import { portfolioCarouselStyles as s } from "./PortfolioCarousel.styles";
 
+const portfolioTabs = [
+  { id: "all", label: "Все" },
+  { id: "freelance", label: "Фриланс" },
+] as const;
+
+type PortfolioTabId = (typeof portfolioTabs)[number]["id"];
+
 export function PortfolioCarousel() {
+  const [activeTab, setActiveTab] = useState<PortfolioTabId>("all");
   const [activeIndex, setActiveIndex] = useState(0);
-  const total = portfolioCases.length;
+
+  const visibleCases = useMemo(
+    () =>
+      activeTab === "freelance"
+        ? portfolioCases.filter((item) => item.badge === "Фриланс")
+        : portfolioCases,
+    [activeTab],
+  );
+
+  const total = visibleCases.length;
 
   const goTo = useCallback(
     (index: number) => {
@@ -17,17 +34,37 @@ export function PortfolioCarousel() {
     [total],
   );
 
+  const handleTabChange = (tabId: PortfolioTabId) => {
+    setActiveTab(tabId);
+    setActiveIndex(0);
+  };
+
   const goPrev = () => goTo(activeIndex - 1);
   const goNext = () => goTo(activeIndex + 1);
 
   return (
     <div className={s.root}>
+      <div className={s.tabs} role="tablist" aria-label="Категории проектов">
+        {portfolioTabs.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            className={cn(s.tab, activeTab === tab.id && s.tabActive)}
+            onClick={() => handleTabChange(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
       <div className={s.viewport}>
         <div
           className={s.track}
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {portfolioCases.map((item, index) => (
+          {visibleCases.map((item, index) => (
             <div key={item.id} className={s.slide}>
               <PortfolioCard item={item} priority={index === 0} />
             </div>
@@ -41,12 +78,13 @@ export function PortfolioCarousel() {
           className={s.arrowBtn}
           onClick={goPrev}
           aria-label="Предыдущий проект"
+          disabled={total <= 1}
         >
           ‹
         </button>
 
         <div className={s.dots}>
-          {portfolioCases.map((item, index) => (
+          {visibleCases.map((item, index) => (
             <button
               key={item.id}
               type="button"
@@ -67,6 +105,7 @@ export function PortfolioCarousel() {
           className={s.arrowBtn}
           onClick={goNext}
           aria-label="Следующий проект"
+          disabled={total <= 1}
         >
           ›
         </button>

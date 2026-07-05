@@ -1,5 +1,9 @@
 export const portfolioCarouselStyles = {
   root: "relative",
+  tabs: "mb-6 flex flex-wrap justify-center gap-2",
+  tab: "rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-muted transition-all hover:border-primary hover:text-primary",
+  tabActive:
+    "border-primary bg-gradient-to-r from-primary-light to-accent-light text-primary shadow-[0_4px_12px_rgba(234,88,12,0.08)]",
   viewport: "overflow-hidden",
   track: "flex transition-transform duration-500 ease-out",
   slide: "w-full shrink-0 px-0.5",

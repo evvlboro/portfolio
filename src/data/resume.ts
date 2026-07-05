@@ -165,6 +165,23 @@ export const portfolioCases = [
     ],
     image: "/images/nsv.png",
   },
+  {
+    id: "tverkamen",
+    badge: "Фриланс",
+    company: "Pet project",
+    title: "ТВЕРЬКАМЕНЬ",
+    exampleUrl: "https://tverkamen.vercel.app/",
+    exampleLabel: "Пример проекта",
+    description:
+      "Pet-проект: frontend сайта компании по изготовлению гранитных памятников в Твери. Вёрстка по макету Figma, самостоятельная разработка в Cursor и деплой на Vercel.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    highlights: [
+      "Главная, каталог с избранным и поиском, галерея и страницы услуг",
+      "Адаптивная вёрстка по макету Figma (desktop и mobile)",
+      "Самостоятельная разработка и деплой на Vercel",
+    ],
+    image: "/images/tverkamen.png",
+  },
 ];
 
 export const education = [

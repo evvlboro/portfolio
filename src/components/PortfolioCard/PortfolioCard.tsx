@@ -28,12 +28,14 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
         <h3 className={s.title}>{item.title}</h3>
 
         <div className={s.links}>
-          <p className={s.companySiteRow}>
-            <span className={s.companySiteLabel}>Сайт компании: </span>
-            <a href={item.url} target="_blank" rel="noopener noreferrer" className={s.link}>
-              {item.url.replace(/^https?:\/\//, "")}
-            </a>
-          </p>
+          {"url" in item && item.url && (
+            <p className={s.companySiteRow}>
+              <span className={s.companySiteLabel}>Сайт компании: </span>
+              <a href={item.url} target="_blank" rel="noopener noreferrer" className={s.link}>
+                {item.url.replace(/^https?:\/\//, "")}
+              </a>
+            </p>
+          )}
           {"exampleUrl" in item && item.exampleUrl && item.exampleLabel && (
             <a
               href={item.exampleUrl}
