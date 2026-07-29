@@ -8,7 +8,7 @@ import { portfolioCarouselStyles as s } from "./PortfolioCarousel.styles";
 
 const portfolioTabs = [
   { id: "all", label: "Все" },
-  { id: "freelance", label: "Фриланс" },
+  { id: "freelance", label: "Фриланс и pet-проекты" },
 ] as const;
 
 type PortfolioTabId = (typeof portfolioTabs)[number]["id"];
@@ -20,7 +20,9 @@ export function PortfolioCarousel() {
   const visibleCases = useMemo(
     () =>
       activeTab === "freelance"
-        ? portfolioCases.filter((item) => item.badge === "Фриланс")
+        ? portfolioCases.filter(
+            (item) => item.badge === "Фриланс" || item.badge === "Pet project",
+          )
         : portfolioCases,
     [activeTab],
   );

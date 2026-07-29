@@ -19,8 +19,9 @@
 - [Citrusmall](https://portfolio-aprilrynn.vercel.app/demo/citrusmall/) — статический лендинг
 - [На связи (ноутбуки)](https://portfolio-aprilrynn.vercel.app/demo/nsv/product/laptops) — React-лендинг
 - [ТВЕРЬКАМЕНЬ](https://tverkamen.vercel.app/) — pet-проект: frontend сайта по макету Figma (Next.js, TypeScript, Tailwind CSS), деплой на Vercel
+- [Интернет-магазин одежды](https://clothing-store-pet-project-by-aprilrynn.vercel.app/) — pet-проект: каталог, корзина и контентные страницы по макету (Next.js, TypeScript, Tailwind CSS), деплой на Vercel
 
-В секции «Проекты» есть вкладки **Все** и **Фриланс** — во второй собраны «На связи» и «ТВЕРЬКАМЕНЬ».
+В секции «Проекты» есть вкладки **Все** и **Фриланс** — во второй собраны «На связи», «ТВЕРЬКАМЕНЬ» и «Интернет-магазин одежды».
 
 ## Также можете посмотреть примеры тестовых, которые я делал для различных компаний:
 

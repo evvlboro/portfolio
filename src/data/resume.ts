@@ -167,8 +167,8 @@ export const portfolioCases = [
   },
   {
     id: "tverkamen",
-    badge: "Фриланс",
-    company: "Pet project",
+    badge: "Pet project",
+    company: "",
     title: "ТВЕРЬКАМЕНЬ",
     exampleUrl: "https://tverkamen.vercel.app/",
     exampleLabel: "Пример проекта",
@@ -181,6 +181,23 @@ export const portfolioCases = [
       "Самостоятельная разработка и деплой на Vercel",
     ],
     image: "/images/tverkamen.png",
+  },
+  {
+    id: "clothing-store",
+    badge: "Pet project",
+    company: "",
+    title: "Интернет-магазин одежды",
+    exampleUrl: "https://clothing-store-pet-project-by-aprilrynn.vercel.app/",
+    exampleLabel: "Пример проекта",
+    description:
+      "Pet-проект: frontend интернет-магазина одежды по макету. Каталог, карточки товаров, корзина, конструктор дизайна и контентные страницы. Самостоятельная разработка в Cursor и деплой на Vercel.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    highlights: [
+      "Каталог, категории, карточки товаров и корзина",
+      "Главная со слайдерами, страницы «О нас», услуги, доставка, оплата, отзывы и FAQ",
+      "Адаптивная вёрстка по макету и деплой на Vercel",
+    ],
+    image: "/images/clothing-store.png",
   },
 ];
 

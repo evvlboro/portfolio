@@ -23,7 +23,7 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
 
       <div className={s.content}>
         <span className={s.badge}>
-          {item.badge} · {item.company}
+          {item.company ? `${item.badge} · ${item.company}` : item.badge}
         </span>
         <h3 className={s.title}>{item.title}</h3>
 
