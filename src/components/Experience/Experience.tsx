@@ -45,6 +45,25 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
+                {"project" in item && item.project && (
+                  <p className={s.project}>
+                    Проект:{" "}
+                    <a
+                      href={item.project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={s.projectLink}
+                    >
+                      {item.project.label}
+                    </a>
+                  </p>
+                )}
+                {item.technologies && (
+                  <p className={s.technologies}>
+                    <span className={s.technologiesLabel}>Технологии:</span>{" "}
+                    {item.technologies}
+                  </p>
+                )}
               </div>
             </article>
           );

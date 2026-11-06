@@ -12,4 +12,9 @@ export const experienceStyles = {
   highlights: "mt-0 flex list-none flex-col gap-2 p-0",
   highlightItem:
     "relative pl-5 text-[0.9375rem] leading-relaxed text-foreground before:absolute before:top-[0.55rem] before:left-0 before:h-2 before:w-2 before:rounded-full before:bg-gradient-to-br before:from-primary before:to-accent before:content-['']",
+  project: "mt-4 text-[0.9375rem] leading-relaxed text-foreground",
+  projectLink:
+    "font-semibold text-primary underline-offset-2 transition-colors hover:text-accent hover:underline",
+  technologies: "mt-4 text-[0.8125rem] leading-relaxed text-muted",
+  technologiesLabel: "font-semibold text-foreground",
 };

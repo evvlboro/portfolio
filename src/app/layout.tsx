@@ -8,9 +8,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Евгений Боровиков — Frontend Developer",
+  title: "Евгений Боровиков — Web Developer",
   description:
-    "Frontend-разработчик с опытом в банковской сфере, телекоме и e-commerce. React, Next.js, TypeScript.",
+    "Web-разработчик с коммерческим опытом создания сайтов, лендингов и веб-интерфейсов. JavaScript, TypeScript, React, Node.js, AI-assisted development.",
 };
 
 export default function RootLayout({
